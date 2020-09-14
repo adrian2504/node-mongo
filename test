@@ -1,0 +1,27 @@
+(err,result) =>{
+        assert.equal(err,null);
+        console.log("Inserted"+result.result.n+
+                "documents into the collection" + collection);
+        callback(result);        
+    }
+
+
+(err,docs) =>{
+        assert.equal(err,null);
+        callback(docs);
+    }
+
+
+
+ (err, result) => {
+        assert.equal(err,null);
+        console.log('Remove the document',document);
+        callback(result);
+
+    }
+
+{$set: update},null,(err,result) =>{
+         assert.equal(err,null);
+         console.log('updated the document with', update);
+         callback(result);
+     }            
